@@ -9,7 +9,7 @@
         {include file="menueLeiste.tpl"}
 
         <div id="datum">{$monat} 20{$jahr}</div>  
-
+Hallo
         {if isset($tpl_name)}
             {include file="$tpl_name"}
         {/if}
