@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>  
-        {include file="menueLeiste.tpl"}
+        {include file="menu.tpl"}
 
-        <div id="datum">{$monat} 20{$jahr}</div>  
+        <div id="datum">{$month} 20{$year}</div>  
         {if isset($tpl_name)}
             {include file="$tpl_name"}
         {else}
@@ -18,10 +18,10 @@
     <footer> 
         <ul>
             <li>
-                <a href ="index.php?page=impressum">Impressum </a>
+                <a href ="index.php?page=imprint">Impressum </a>
             </li>
             <li>
-                <a href ="index.php?page=kontakt"> Kontakt</a> 
+                <a href ="index.php?page=contact"> Kontakt</a> 
             </li>
 
         </ul>

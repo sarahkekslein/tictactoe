@@ -4,8 +4,8 @@ $tpl = new Smarty();
 
 
 
-$tpl->assign('jahr', date('y'));
-$tpl->assign('monat', date('F'));
+$tpl->assign('year', date('y'));
+$tpl->assign('month', date('F'));
 
 if (isset($_GET['page'])) {
     require $_GET['page'] . '.php';
