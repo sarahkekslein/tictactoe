@@ -1,8 +1,8 @@
 <div>
-    <form method="post" action="index.php?page=registration">
+    <form id="register" method="post" action="index.php?page=registration">
     <input type="submit" value="Registrieren">
     </form>
-    <form method="post" action="index.php?page=login">
+    <form id="login" method="post" action="index.php?page=login">
     <input type="submit" value="Anmelden">
     </form>    
 </div>
