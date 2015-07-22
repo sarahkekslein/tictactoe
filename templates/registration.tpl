@@ -6,4 +6,7 @@
     Passwort: <input type="password" name="pw"/>
     </br>
     <input type="submit" value="Registrieren"><br/>
+    {if isset($message)}        
+        {$message}
+    {/if}
 </form>

@@ -10,11 +10,12 @@ $email = $_POST['email'];
 
 $statement = $connection->prepare("SELECT * FROM user WHERE name = :name");
 $statement->bindValue(':name', $username);
+$statement->execute();
 $result = $statement->fetchAll();
 $statement->closeCursor();
-$test = count($result);
+
 if(count($result) > 0 || $password === '' || $username === '' || $email === '') {
-    header('Location: index.php?page=registration');
+    header('Location: index.php?page=registration&fail=1');
 } else {
     $statement = $connection->prepare("INSERT INTO user (name, password, email) VALUES (:name, :password, :email)");
     $statement->bindValue(':name', $_POST['name']);
