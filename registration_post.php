@@ -2,22 +2,34 @@
 
 require './lib/Database.class.php';
 
-$db = Database::getInstance();
-//$range = array('options' => array('min_range' => 1, 'max_range' => 6));
-//$choice = filter_input(INPUT_POST, 'note', FILTER_VALIDATE_INT, $range);
+$connection = Database::getInstance();
 
+$password = $_POST['pw'];
+$username = $_POST['name'];
+$email = $_POST['email'];
 
-if (empty($choice)) {
-    header('Location: register.php');
+$statement = $connection->prepare("SELECT * FROM user WHERE name = :name");
+$statement->bindValue(':name', $username);
+$statement->execute();
+$result = $statement->fetchAll();
+$statement->closeCursor();
+
+if(count($result) > 0 || $password === '' || $username === '' || $email === '') {
+    header('Location: index.php?page=registration&fail=1');
 } else {
-    $einfuegen = $db->prepare("INSERT INTO benutzer (name, passwort, email)VALUES (:name, :passwort, :email)");
-    $einfuegen->bindValue(':name', $_POST['name']);
-    $einfuegen->bindValue(':passwort', password_hash($_POST['pw'], PASSWORD_DEFAULT));
-    $einfuegen->bindValue(':note', $_POST['email']);
-    $einfuegen->execute();
-    $einfuegen->closeCursor();
-    echo 'gut';
+    $statement = $connection->prepare("INSERT INTO user (name, password, email) VALUES (:name, :password, :email)");
+    $statement->bindValue(':name', $_POST['name']);
+    $statement->bindValue(':password', password_hash($_POST['pw'], PASSWORD_DEFAULT));
+    $statement->bindValue(':email', $_POST['email']);
+    $statement->execute();
+    $statement->closeCursor();
+
+    header('Location: index.php?page=game');
 }
+
+
+
+
 
 ?>
 

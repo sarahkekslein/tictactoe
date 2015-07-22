@@ -3,7 +3,10 @@
     </br>
     Email <input type="text" name="email"/>
     </br>
-    Passwort: <input type="text" name="pw"/>
+    Passwort: <input type="password" name="pw"/>
     </br>
     <input type="submit" value="Registrieren"><br/>
+    {if isset($message)}        
+        {$message}
+    {/if}
 </form>
