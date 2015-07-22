@@ -1,4 +1,4 @@
 <?php
-$tpl->display('templates/registration.tpl');
+//{$tpl->display('templates/registration.tpl');}
 ?>
 
