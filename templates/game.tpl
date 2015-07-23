@@ -1,4 +1,5 @@
 <script src="./scripts/gamelogic.js"></script>
+<link rel="stylesheet" href="./styles/game.css" />
 <div id="current_player"></div>
 <table>
     <tr>
