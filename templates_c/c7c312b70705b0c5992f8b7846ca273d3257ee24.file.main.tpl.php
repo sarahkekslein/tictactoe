@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 12:16:00
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 11:40:55
          compiled from "templates\main.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:753555ae43003070c5-17770242%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2847855b0b6a74c3666-13570874%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '4524841ba6e5f2582af5404a81310d3a23649a76' => 
+    'c7c312b70705b0c5992f8b7846ca273d3257ee24' => 
     array (
       0 => 'templates\\main.tpl',
-      1 => 1437646419,
+      1 => 1437644322,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '753555ae43003070c5-17770242',
+  'nocache_hash' => '2847855b0b6a74c3666-13570874',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.20',
-  'unifunc' => 'content_55ae430063a431_47381099',
   'variables' => 
   array (
     'month' => 0,
@@ -24,8 +22,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'tpl_name' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.20',
+  'unifunc' => 'content_55b0b6a7b0cde3_40905083',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55ae430063a431_47381099')) {function content_55ae430063a431_47381099($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_55b0b6a7b0cde3_40905083')) {function content_55b0b6a7b0cde3_40905083($_smarty_tpl) {?><!DOCTYPE html>
 <html>
     <head>
         <title>Browserspiel</title>

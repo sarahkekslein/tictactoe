@@ -19,7 +19,7 @@ function update_player_info($id, $statement, $db_connection = null) {
 function data_to_html($data, $editable) {
     $html = '<table>';
     foreach ($data as $key => $value) {
-        if ($key !== 'password') {
+        if ($key !== 'password' && $key !=='id') {
             $html = $html . '<tr><th>' . $key . '</th>' . '<th>';
             $html = (in_array($key, $editable)) ? $html . '<input name="' . $key . '" type="text" value="' . $value . '"></input></th></tr>' : $html . $value . '</th></tr>';
         }
@@ -35,6 +35,24 @@ function create_site($tpl) {
     $tpl->assign('tpl_name', $_GET['page'] . ".tpl");
 }
 
+<<<<<<< HEAD
+if (!empty($_POST)) {
+    if ($_POST['btn'] === 'Speichern') {
+        $statement = '';
+        foreach ($_POST as $key => $value) {
+            if ($key !== 'btn') {
+                $statement = $statement . ', ' . $key . '="' . $value . '"';
+            }
+        }
+        update_player_info($_SESSION['user'], substr($statement, 2));
+        create_site($tpl);
+    } else if ($_POST['btn'] === 'Passwort aendern') {
+        $tpl->assign('tpl_name', 'edit_pw.tpl');
+    } else if ($_POST['btn'] === 'Passwort speichern') {
+        $data = get_player_info($_SESSION['user']);
+        if (password_verify($_POST['old'], $data['password'])) {
+            update_player_info($_SESSION['user'], 'password="' . password_hash($_POST['new1'], PASSWORD_DEFAULT) . '"');
+=======
 if (!isset($_GET['page'])) {
     echo 'Zugriff verweigert!';
 } else {
@@ -47,6 +65,7 @@ if (!isset($_GET['page'])) {
                 }
             }
             update_player_info($_SESSION['user'], substr($statement, 2));
+>>>>>>> origin/master
             create_site($tpl);
         } else if ($_POST['btn'] === 'change') {
             $tpl->assign('tpl_name', 'edit_pw.tpl');
