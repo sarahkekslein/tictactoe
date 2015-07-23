@@ -12,8 +12,9 @@ $(document).ready(function () {
             async: false
 
         }).done(function (result) {
-            for each(var proposal in result) {
-                $('#proposal').append('proposal');
+            alert(result[0]['name']);
+            for(var i in result) {
+                $('#proposal').append(result[i]['name']);
             }
             $('#proposal').show();
         }).fail(function () {
