@@ -2,4 +2,11 @@
     height          : 150px;
     width           : 150px;
     background-color: #dcdcdc;
+    font-size       : 100px;
+    text-align      : center;
+}
+
+.center {
+    align:          center;
+    valign:         middle;
 }

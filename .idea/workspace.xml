@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ebe9259b-f2da-4d44-8af6-1f5760325cd1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/game.css" afterPath="$PROJECT_DIR$/styles/game.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/game.tpl" afterPath="$PROJECT_DIR$/templates/game.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/gamelogic.js" afterPath="$PROJECT_DIR$/scripts/gamelogic.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -29,15 +30,9 @@
       <file leaf-file-name="gamelogic.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/gamelogic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64415157">
-              <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-              <folding>
-                <element signature="n#!!block;n#delete_field#0" expanded="false" />
-                <element signature="n#!!block;n#win_row#0" expanded="false" />
-                <element signature="n#!!block;n#win_colum#0" expanded="false" />
-                <element signature="n#!!block;n#win_diagonal#0" expanded="false" />
-                <element signature="n#!!block;n#tie#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.7561779">
+              <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -45,8 +40,8 @@
       <file leaf-file-name="game.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/game.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.730769">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+            <state vertical-scroll-proportion="-2.6153846">
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -56,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/styles/game.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -655,8 +650,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/game.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -664,22 +659,16 @@
     <entry file="file://$PROJECT_DIR$/styles/game.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/gamelogic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64415157">
-          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-          <folding>
-            <element signature="n#!!block;n#delete_field#0" expanded="false" />
-            <element signature="n#!!block;n#win_row#0" expanded="false" />
-            <element signature="n#!!block;n#win_colum#0" expanded="false" />
-            <element signature="n#!!block;n#win_diagonal#0" expanded="false" />
-            <element signature="n#!!block;n#tie#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.7561779">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -9,7 +9,8 @@ $(function () {
     $('.button').click(function () {
         $(this)
                 .css('background-color', '#00FF00')
-                .prop('disabled', true);
+                .prop('disabled', true)
+                .html('X');
 
         var id = parseInt($(this).attr('id').substring(3));
 
@@ -25,7 +26,10 @@ $(function () {
         }
     });
     $('#new_game').click(function () {
-        $('.button').css('background-color', '#dcdcdc').prop('disabled', false);
+        $('.button')
+            .css('background-color', '#dcdcdc')
+            .prop('disabled', false)
+            .html('');
         not_clicked = [11, 12, 13, 21, 22, 23, 31, 32, 33];
         current_player = parseInt(Math.random() * 2);
         if (current_player === 1) {
@@ -46,7 +50,8 @@ function ki_play() {
     var field = not_clicked[random_number];
     $('#btn' + field)
             .css('background-color', '#FF0000')
-            .prop('disabled', true);
+            .prop('disabled', true)
+        .html('O');
 
     not_clicked = delete_field(not_clicked, random_number);
 }
