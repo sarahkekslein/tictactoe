@@ -18,7 +18,14 @@ $(function () {
         ki_play();
         win_or_game_end();
     });
-    $('#new_game').click(function(){$(document).ready()});
+    $('#new_game').click(function(){
+        $('.button').css('background-color','#dcdcdc').prop('disabled',false);
+        not_clicked = [11, 12, 13, 21, 22, 23, 31, 32, 33];
+        current_player = parseInt(Math.random() * 2);
+        if (current_player === 1) {
+            ki_play();
+        }
+    });
 });
 
 function ki_play() {
