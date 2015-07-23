@@ -18,3 +18,5 @@
         <td><button id="btn33" class="button"></button></td>
     </tr>
 </table>
+
+<button id="new_game">Neues Spiel</button>

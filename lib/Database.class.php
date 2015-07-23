@@ -1,16 +1,4 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of Database
- *
- * @author sb147537
- */
 class Database
 {
     private static $server = "mysql:dbname=tictactoe;host=127.0.0.1";
