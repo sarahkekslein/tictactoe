@@ -24,19 +24,4 @@ class Database
 
         return Database::$connection;
     }
-
-    public static function get_data($statement, $db_connection)
-    {
-        $data = array();
-        $db_request = $db_connection->prepare($statement);
-        $db_request->execute();
-        while ($array = $db_request->fetch()) {
-            foreach ($array as $key => $value) {
-                if (!is_integer($key)) {
-                    $data[$key] = $value;
-                }
-            }
-        }
-        return $data;
-    }
 }
