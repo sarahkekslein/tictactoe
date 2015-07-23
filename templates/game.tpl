@@ -20,4 +20,4 @@
     </tr>
 </table>
 <br/>
-<button id="new_game">Neues Spiel</button>
+<button id="new_game" class="new_game_button">Neues Spiel</button>

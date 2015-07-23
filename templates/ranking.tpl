@@ -1,0 +1,12 @@
+<h1>Rangliste</h1>
+<table>
+    <tr>
+        <th>Rang</th>
+        <th>Name</th>
+        <th>Punkte</th>
+        <th>Spiele</th>
+        <th>Gewonnen</th>
+        <th>Unentschieden</th>
+        <th>Verloren</th>
+    </tr>
+    {$ranking}</table>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-22 19:06:52
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 14:59:17
          compiled from "templates\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:753555ae43003070c5-17770242%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4524841ba6e5f2582af5404a81310d3a23649a76' => 
     array (
       0 => 'templates\\main.tpl',
-      1 => 1437573387,
+      1 => 1437656302,
       2 => 'file',
     ),
   ),
@@ -19,8 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_55ae430063a431_47381099',
   'variables' => 
   array (
-    'month' => 0,
-    'year' => 0,
+    'isLoggedIn' => 0,
     'tpl_name' => 0,
   ),
   'has_nocache_code' => false,
@@ -32,17 +31,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="./styles/main.css" />
-        <link rel="stylesheet" href="./styles/main.css" />
-        <script src="./scripts/jquery.js"></script>
-        
+        <script src="./scripts/jquery.js"></script>    
     </head>
-    <body>  
-        <?php echo $_smarty_tpl->getSubTemplate ("menu.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-
-        <div id="datum"><?php echo $_smarty_tpl->tpl_vars['month']->value;?>
- 20<?php echo $_smarty_tpl->tpl_vars['year']->value;?>
-</div>  
+    <?php if ($_smarty_tpl->tpl_vars['isLoggedIn']->value) {?>
+        <header class="header">
+            <form method="post" action="index.php?page=game">
+                <input id="start" type="submit" value="Zum Spiel" class="menu">
+            </form>
+            <form method="post" action="index.php?page=edit">
+                <input id="profile" type="submit" value="Profil" class="menu">
+            </form>
+            <form method="post" action="index.php?page=chat">
+                <input id="chat" type="submit" value="Chat" class="menu">
+            </form>
+            <form method="post" action="index.php?page=logout">
+                <input id="logout" type="submit" value="Logout" class="menu">
+            </form>
+        </header>
+    <?php }?>
+    <body>         
         <?php if (isset($_smarty_tpl->tpl_vars['tpl_name']->value)) {?>
             <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_name']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -52,14 +59,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <?php }?>
     </body> 
     <footer> 
-        <ul>
-            <li>
-                <a href ="index.php?page=imprint">Impressum </a>
-            </li>
-            <li>
-                <a href ="index.php?page=contact"> Kontakt</a> 
-            </li>
-
-        </ul>
+        <div>
+            <a href ="index.php?page=imprint">Impressum </a>
+            |
+            <a href ="index.php?page=contact"> Kontakt</a> 
+        </div>
     </footer>
 </html><?php }} ?>
