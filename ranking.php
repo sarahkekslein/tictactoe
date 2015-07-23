@@ -5,10 +5,8 @@
  * Date: 23.07.2015
  * Time: 12:52
  */
-
 require_once './lib/Member.class.php';
 require_once './lib/Ranking.class.php';
-require_once './lib/Database.class.php';
 
 $db_connect = Database::getInstance();
 $statement = "SELECT userId FROM statistic";
@@ -24,8 +22,10 @@ while ($array = $db_request->fetch()) {
 }
 
 $member_array = array();
-foreach($data as $id){
+foreach ($data as $id) {
     $member_array[$id] = new Member((int)$id);
 }
 $ranking = new Ranking($member_array);
-var_dump($ranking);
+$html = $ranking->to_html();
+$tpl->assign('ranking', $html);
+$tpl->assign('tpl_name', $_GET['page'] . '.tpl');
