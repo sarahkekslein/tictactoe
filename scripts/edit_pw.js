@@ -6,7 +6,7 @@ $(document).ready(function () {
         }
 
         if ($('#new1').val() !== $('#new2').val()) {
-            $('#output').html('Die beiden Passwoerter sind nicht identisch');
+            $('#output').html('Die beiden Passwörter sind nicht identisch');
             return false;
         }
     });

@@ -8,7 +8,7 @@
 class Member
 {
 
-    private $id, $user, $points, $win, $lose, $tie, $games;
+    private $id, $name, $points, $win, $lose, $tie, $games;
 
     public function __construct($id)
     {
@@ -29,7 +29,7 @@ class Member
     {
         $db_connect = Database::getInstance();
         $data = Database::get_data("SELECT win, lose, tie FROM statistic WHERE userid=$this->id", $db_connect);
-        $this->user = Database::get_data("SELECT name FROM user WHERE id=$this->id", $db_connect)['name'];
+        $this->name = Database::get_data("SELECT name FROM user WHERE id=$this->id", $db_connect)['name'];
         return $data;
 
     }
@@ -49,9 +49,9 @@ class Member
         return $this->win;
     }
 
-    public function get_loose()
+    public function get_lose()
     {
-        return $this->loose;
+        return $this->lose;
     }
 
     public function get_tie()
