@@ -1,12 +1,16 @@
 .button{
-    height          : 150px;
-    width           : 150px;
+    height: 150px;
+    width: 150px;
     background-color: #dcdcdc;
-    font-size       : 100px;
-    text-align      : center;
+    font-size: 100px;
+    text-align: center;
 }
 
 .center {
-    align:          center;
-    valign:         middle;
+    margin: 0px auto;
+}
+
+.new_game_button {
+    width: 11%;
+    margin: 0px 44.5%;
 }

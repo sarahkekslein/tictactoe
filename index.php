@@ -4,10 +4,6 @@ require './lib/Database.class.php';
 session_start();
 $tpl = new Smarty();
 
-
-
-$tpl->assign('year', date('y'));
-$tpl->assign('month', date('F'));
 $tpl->assign('isLoggedIn', isset($_SESSION['user']));
 
 $whitelist = array('login', 'logout', 'edit', 'game', 'login_post', 'registration', 'registration_post', 'chat');
