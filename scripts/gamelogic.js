@@ -32,6 +32,10 @@ $(function () {
     });
 });
 
+function set_buttons_inactive() {
+    //TODO
+}
+
 function ki_play() {
     var random_number = parseInt(Math.random() * (not_clicked.length + 1));
     var field = not_clicked[random_number];
@@ -63,9 +67,7 @@ function win_row() {
         }
     } else if ($('#btn21').css('background-color') === $('#btn22').css('background-color')
             && $('#btn22').css('background-color')=== $('#btn23').css('background-color')
-            && $('#btn21').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn22').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn23').css('background-color') !== 'rgb(211, 211, 211)') {
+            && $('#btn21').css('background-color') !== 'rgb(211, 211, 211)') {
         if ($('#btn11').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
             return true;
@@ -75,9 +77,7 @@ function win_row() {
         }
     } else if ($('#btn31').css('background-color') === $('#btn32').css('background-color')
             && $('#btn32').css('background-color')=== $('#btn33').css('background-color')
-            && $('#btn31').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn32').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn33').css('background-color') !== 'rgb(211, 211, 211)') {
+            && $('#btn31').css('background-color') !== 'rgb(211, 211, 211)') {
         if ($('#btn11').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
             return true;
@@ -92,9 +92,7 @@ function win_row() {
 function win_colum() {
     if ($('#btn11').css('background-color') === $('#btn21').css('background-color')
             && $('#btn21').css('background-color') === $('#btn31').css('background-color')
-            && $('#btn11').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn21').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn31').css('background-color') !== 'rgb(211, 211, 211)') {
+            && $('#btn11').css('background-color') !== 'rgb(211, 211, 211)') {
         if ($('#btn11').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
             return true;
@@ -104,9 +102,7 @@ function win_colum() {
         }
     } else if ($('#btn12').css('background-color') === $('#btn22').css('background-color')
             && $('#btn22').css('background-color') === $('#btn32').css('background-color')
-            && $('#btn12').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn22').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn32').css('background-color') !== 'rgb(211, 211, 211)') {
+            && $('#btn12').css('background-color') !== 'rgb(211, 211, 211)') {
         if ($('#btn11').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
             return true;
@@ -116,9 +112,7 @@ function win_colum() {
         }
     } else if ($('#btn13').css('background-color') === $('#btn23').css('background-color')
             && $('#btn23').css('background-color') === $('#btn33').css('background-color')
-            && $('#btn13').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn23').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn33').css('background-color') !== 'rgb(211, 211, 211)') {
+            && $('#btn13').css('background-color') !== 'rgb(211, 211, 211)') {
         if ($('#btn11').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
             return true;
@@ -133,9 +127,7 @@ function win_colum() {
 function win_diagonal() {
     if ($('#btn11').css('background-color') === $('#btn22').css('background-color')
             && $('#btn22').css('background-color') === $('#btn33').css('background-color')
-            && $('#btn11').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn22').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn33').css('background-color') !== 'rgb(211, 211, 211)') {
+            && $('#btn11').css('background-color') !== 'rgb(211, 211, 211)') {
         if ($('#btn12').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
             return true;
@@ -145,9 +137,7 @@ function win_diagonal() {
         }
     } else if ($('#btn31').css('background-color') === $('#btn22').css('background-color')
             && $('#btn22').css('background-color') === $('#btn13').css('background-color')
-            && $('#btn31').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn22').css('background-color') !== 'rgb(211, 211, 211)'
-            && $('#btn13').css('background-color') !== 'rgb(211, 211, 211)') {
+            && $('#btn31').css('background-color') !== 'rgb(211, 211, 211)') {
         if ($('#btn11').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
             return true;
