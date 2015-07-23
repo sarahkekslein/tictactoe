@@ -74,37 +74,25 @@ function win_row() {
         && $('#btn12').css('background-color') === $('#btn13').css('background-color')
         && $('#btn11').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn11').css('background-color') === 'rgb(255, 0, 0)') {
-            alert("Der Computer hat gewonnen :(");
-            upload(LOSE);
-            return true;
+            return upload(LOSE);
         } else {
-            alert("Du hast gewonnen :)");
-            upload(WIN);
-            return true;
+            return upload(WIN);
         }
     } else if ($('#btn21').css('background-color') === $('#btn22').css('background-color')
         && $('#btn22').css('background-color') === $('#btn23').css('background-color')
         && $('#btn21').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn21').css('background-color') === 'rgb(255, 0, 0)') {
-            alert("Der Computer hat gewonnen :(");
-            upload(LOSE);
-            return true;
+            return upload(LOSE);
         } else {
-            alert("Du hast gewonnen :)");
-            upload(WIN);
-            return true;
+            return upload(WIN);
         }
     } else if ($('#btn31').css('background-color') === $('#btn32').css('background-color')
         && $('#btn32').css('background-color') === $('#btn33').css('background-color')
         && $('#btn31').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn31').css('background-color') === 'rgb(255, 0, 0)') {
-            alert("Der Computer hat gewonnen :(");
-            upload(LOSE);
-            return true;
+            return upload(LOSE);
         } else {
-            alert("Du hast gewonnen :)");
-            upload(WIN);
-            return true;
+            return upload(WIN);
         }
     }
     return false;
@@ -115,37 +103,25 @@ function win_colum() {
         && $('#btn21').css('background-color') === $('#btn31').css('background-color')
         && $('#btn11').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn11').css('background-color') === 'rgb(255, 0, 0)') {
-            alert("Der Computer hat gewonnen :(");
-            upload(LOSE);
-            return true;
+            return upload(LOSE);
         } else {
-            alert("Du hast gewonnen :)");
-            upload(WIN);
-            return true;
+            return upload(WIN);
         }
     } else if ($('#btn12').css('background-color') === $('#btn22').css('background-color')
         && $('#btn22').css('background-color') === $('#btn32').css('background-color')
         && $('#btn12').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn12').css('background-color') === 'rgb(255, 0, 0)') {
-            alert("Der Computer hat gewonnen :(");
-            upload(LOSE);
-            return true;
+            return upload(LOSE);
         } else {
-            alert("Du hast gewonnen :)");
-            upload(WIN);
-            return true;
+            return upload(WIN);
         }
     } else if ($('#btn13').css('background-color') === $('#btn23').css('background-color')
         && $('#btn23').css('background-color') === $('#btn33').css('background-color')
         && $('#btn13').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn13').css('background-color') === 'rgb(255, 0, 0)') {
-            alert("Der Computer hat gewonnen :(");
-            upload(LOSE);
-            return true;
+            return upload(LOSE);
         } else {
-            alert("Du hast gewonnen :)");
-            upload(WIN);
-            return true;
+            return upload(WIN);
         }
     }
     return false;
@@ -156,25 +132,17 @@ function win_diagonal() {
         && $('#btn22').css('background-color') === $('#btn33').css('background-color')
         && $('#btn11').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn11').css('background-color') === 'rgb(255, 0, 0)') {
-            alert("Der Computer hat gewonnen :(");
-            upload(LOSE);
-            return true;
+            return upload(LOSE);
         } else {
-            alert("Du hast gewonnen :)");
-            upload(WIN);
-            return true;
+            return upload(WIN);
         }
     } else if ($('#btn31').css('background-color') === $('#btn22').css('background-color')
         && $('#btn22').css('background-color') === $('#btn13').css('background-color')
         && $('#btn31').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn31').css('background-color') === 'rgb(255, 0, 0)') {
-            alert("Der Computer hat gewonnen :(");
-            upload(LOSE);
-            return true;
+            return upload(LOSE);
         } else {
-            alert("Du hast gewonnen :)");
-            upload(WIN);
-            return true;
+            return upload(WIN);
         }
     }
     return false;
@@ -190,9 +158,7 @@ function tie() {
         && $('#btn31').css('background-color') !== ('rgb(220, 220, 220)')
         && $('#btn32').css('background-color') !== ('rgb(220, 220, 220)')
         && $('#btn33').css('background-color') !== ('rgb(220, 220, 220)')) {
-        alert("Keiner hat gewonnen :/");
         upload(TIE);
-        return true;
     }
     return false;
 }
@@ -204,28 +170,18 @@ function win_or_game_end() {
     return false;
 }
 
-function upload($winner) {
-
-    $('#chat_partner').keyup(function () {
-        var content = $('#chat_partner').val();
-        $.ajax({
-            type: 'POST',
-            url: 'chat.json.php',
-            data: {
-                "content": content
-            },
-            async: false
-
-        }).done(function (result) {
-            alert(result[0]['name']);
-            for (var i in result) {
-                $('#proposal').append(result[i]['name']);
-            }
-            $('#proposal').show();
-        }).fail(function () {
-            dialog.show('Fehler', 'Es ist ein Fehler aufgetreten. Bitte laden Sie\n\
-                     die Seite neu.');
-        });
-
-    });
+function upload(winner) {
+    $.post('upload_winner.json.php', {content: winner});
+    switch (winner) {
+        case TIE :
+            alert("Keiner hat gewonnen :/");
+            break;
+        case LOSE:
+            alert("Der Computer hat gewonnen :(");
+            break;
+        case WIN:
+            alert("Du hast gewonnen :)");
+            break;
+    }
+    return true;
 }

@@ -4,25 +4,10 @@ function get_player_info($id)
 {
     $data = array("id" => $id);
     $db_connection = Database::getInstance();
-    $data_statistic = get_data('SELECT name, password, email, description FROM user WHERE id=' . $id, $db_connection);
-    $data_user = get_data('SELECT win, lose, tie FROM statistic WHERE userid=' . $id, $db_connection);
+    $data_statistic = Database::get_data('SELECT name, password, email, description FROM user WHERE id=' . $id, $db_connection);
+    $data_user = Database::get_data('SELECT win, lose, tie FROM statistic WHERE userid=' . $id, $db_connection);
     $data = array_merge($data, $data_statistic, $data_user);
     $db_connection = null;
-    return $data;
-}
-
-function get_data($statement, $db_connection)
-{
-    $data = array();
-    $db_request = $db_connection->prepare($statement);
-    $db_request->execute();
-    while ($array = $db_request->fetch()) {
-        foreach ($array as $key => $value) {
-            if (!is_integer($key)) {
-                $data[$key] = $value;
-            }
-        }
-    }
     return $data;
 }
 
