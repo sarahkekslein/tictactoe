@@ -7,7 +7,7 @@
 
         <p>Wiederholen: <input type="password" name="new2" id="new2"></p>
 
-        <p><input type="submit" value="save_pw" name="btn" id="save_pw"/> </p>
+        <p><input type="submit" value="Passwort speichern" name="btn" id="save_pw"/> </p>
 
         <div id="output"></div>
 </form>

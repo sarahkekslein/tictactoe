@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 12:16:00
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 11:40:55
          compiled from ".\templates\index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:974655af7533d143f8-74423336%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2908755b0b6a7bf7413-24358331%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '7186efed6b07bcd38aa2fa3dfb2f5e363708538c' => 
+    '5172ad72e89304b4562d008210a3068460fa546b' => 
     array (
       0 => '.\\templates\\index.tpl',
-      1 => 1437646419,
+      1 => 1437644322,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '974655af7533d143f8-74423336',
+  'nocache_hash' => '2908755b0b6a7bf7413-24358331',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.20',
-  'unifunc' => 'content_55af7533d165f6_26936940',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.20',
+  'unifunc' => 'content_55b0b6a7c26223_50570573',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55af7533d165f6_26936940')) {function content_55af7533d165f6_26936940($_smarty_tpl) {?><div id="button">
+<?php if ($_valid && !is_callable('content_55b0b6a7c26223_50570573')) {function content_55b0b6a7c26223_50570573($_smarty_tpl) {?><div id="button">
     <form id="register" method="post" action="index.php?page=registration">
     <input type="submit" value="Registrieren">
     </form>

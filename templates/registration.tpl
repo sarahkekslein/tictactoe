@@ -5,6 +5,8 @@
     </br>
     Passwort: <input type="password" name="pw"/>
     </br>
+    Wiederholen: <input type="password" name="pw2">
+    </br>
     <input type="submit" value="Registrieren"><br/>
     {if isset($message)}        
         {$message}
