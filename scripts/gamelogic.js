@@ -22,8 +22,9 @@ $(function () {
             }
         }
         not_clicked = not_clicked_new;
-
+        win_or_game_end();
         ki_play();
+        win_or_game_end();
     });
 });
 
@@ -49,20 +50,26 @@ function win_row() {
     if ($('#btn11').prop('background-color') === $('#btn12').prop('background-color') === $('#btn13').prop('background-color')) {
         if ($('#btn11').prop('background-color') === '#FF0000') {
             alert("Der Computer hat gewonnen :(");
+            return;
         } else {
             alert("Du hast gewonnen :)");
+            return;
         }
     } else if ($('#btn21').prop('background-color') === $('#btn22').prop('background-color') === $('#btn23').prop('background-color')) {
         if ($('#btn11').prop('background-color') === '#FF0000') {
             alert("Der Computer hat gewonnen :(");
+            return;
         } else {
             alert("Du hast gewonnen :)");
+            return;
         }
     } else if ($('#btn31').prop('background-color') === $('#btn32').prop('background-color') === $('#btn33').prop('background-color')) {
         if ($('#btn11').prop('background-color') === '#FF0000') {
             alert("Der Computer hat gewonnen :(");
+            return;
         } else {
             alert("Du hast gewonnen :)");
+            return;
         }
     }
 }
@@ -71,20 +78,26 @@ function win_colum() {
     if ($('#btn11').prop('background-color') === $('#btn21').prop('background-color') === $('#btn31').prop('background-color')) {
         if ($('#btn11').prop('background-color') === '#FF0000') {
             alert("Der Computer hat gewonnen :(");
+            return;
         } else {
             alert("Du hast gewonnen :)");
+            return;
         }
     } else if ($('#btn12').prop('background-color') === $('#btn22').prop('background-color') === $('#btn32').prop('background-color')) {
         if ($('#btn11').prop('background-color') === '#FF0000') {
             alert("Der Computer hat gewonnen :(");
+            return;
         } else {
             alert("Du hast gewonnen :)");
+            return;
         }
     } else if ($('#btn13').prop('background-color') === $('#btn23').prop('background-color') === $('#btn33').prop('background-color')) {
         if ($('#btn11').prop('background-color') === '#FF0000') {
             alert("Der Computer hat gewonnen :(");
+            return;
         } else {
             alert("Du hast gewonnen :)");
+            return;
         }
     }
 }
@@ -93,15 +106,30 @@ function win_diagonal() {
     if ($('#btn11').prop('background-color') === $('#btn22').prop('background-color') === $('#btn33').prop('background-color')) {
         if ($('#btn11').prop('background-color') === '#FF0000') {
             alert("Der Computer hat gewonnen :(");
+            return;
         } else {
             alert("Du hast gewonnen :)");
+            return;
         }
     } else if ($('#btn31').prop('background-color') === $('#btn22').prop('background-color') === $('#btn13').prop('background-color')) {
         if ($('#btn11').prop('background-color') === '#FF0000') {
             alert("Der Computer hat gewonnen :(");
+            return;
         }
         else {
             alert("Du hast gewonnen :)");
+            return;
         }
     }
+}
+
+function tie() {
+    
+}
+
+function win_or_game_end() {
+    win_row();
+    win_colum();
+    win_diagonal();
+    tie();
 }
