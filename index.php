@@ -1,5 +1,7 @@
 <?php
 require './smarty/libs/Smarty.class.php';
+require './lib/Database.class.php';
+session_start();
 $tpl = new Smarty();
 
 

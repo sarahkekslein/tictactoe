@@ -1,7 +1,3 @@
-/**
- * Created by Marvin on 23.07.2015.
- */
-
 $(document).ready(function () {
     $('#save_pw').click(function () {
         if($('#new1').val().length < 8){

@@ -1,0 +1,18 @@
+header {
+    width: 100%;
+    margin-top: -10px;
+    margin-left: -10px;
+    background-color: yellowgreen;
+    
+    //margin-right: -10px; Rand rechts weg?
+}
+
+/*#start {
+   margin-left: 50%;
+   margin-right: 50%;
+}
+
+#logout {
+   margin-left: 50%;
+   margin-right: 50%;
+}*/

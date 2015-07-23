@@ -1,14 +1,4 @@
 <?php
-require_once './lib/Database.class.php';
-require_once './smarty/libs/Smarty.class.php';
-/**
- * Created by PhpStorm.
- * User: Marvin
- * Date: 22.07.2015
- * Time: 13:02
- */
-
-$_SESSION['user'] = 2;
 function get_player_info($id)
 {
     $data = array("id" => $id);
@@ -39,14 +29,13 @@ function data_to_html($data, $editable)
     return ($html . '</table>');
 }
 
-function create_site()
+function create_site($tpl)
 {
     $editable = ['name', 'passwort', 'email', "description"];
     $data = get_player_info($_SESSION['user']);
     $html = data_to_html($data, $editable);
-    $templet = new Smarty();
-    $templet->assign('table', $html);
-    $templet->display('edit.tpl');
+    $tpl->assign('table', $html);
+    $tpl->assign('tpl_name', $_GET['page'] . ".tpl");
 }
 
 if (!empty($_POST)) {
@@ -58,21 +47,19 @@ if (!empty($_POST)) {
             }
         }
         update_player_info($_SESSION['user'], substr($statement, 2));
-        create_site();
+        create_site($tpl);
     } else if ($_POST['btn'] === 'change') {
-        $templet = new Smarty();
-        $templet->display('./templates/edit_pw.tpl');
+        $tpl->assign('tpl_name', 'edit_pw.tpl');
     } else if ($_POST['btn'] === 'save_pw') {
         $data = get_player_info($_SESSION['user']);
         if (password_verify($_POST['old'], $data['password'])) {
             update_player_info($_SESSION['user'], 'password="' . password_hash($_POST['new1'], PASSWORD_DEFAULT) . '"');
-            create_site();
+            create_site($tpl);
         } else {
-            $templet = new Smarty();
-            $templet->display('./templates/edit_pw.tpl');
+            $tpl->assign('tpl_name', 'edit_pw.tpl');
             echo "Das alte Passwort war nicht korrekt";
         }
     }
 } else {
-    create_site();
+    create_site($tpl);
 }
