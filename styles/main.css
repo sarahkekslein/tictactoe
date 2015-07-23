@@ -14,13 +14,23 @@ footer {
 
 footer div {
     width: 10%;
-    margin-left: 45%;
-    margin-right: 50%;
+    margin: 3px 45% 0px 45%;
 }
 
 footer a {
     text-decoration: none;
     color: greenyellow;
+}
+
+.menu {
+    float: left;
+    height: 30px;
+    width: 20%;
+    margin: 10px 2.5%;
+}
+
+.header {
+    height: 50px;
 }
 
 /*#start {

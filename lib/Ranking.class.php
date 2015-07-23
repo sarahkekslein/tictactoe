@@ -19,8 +19,13 @@ class Ranking
     {
         $point_id_array = $this->get_small_array($member_array);
         $array = array();
-        for($i = 0; $i<count($point_id_array); $i++){
-            $array[] = $member_array[$point_id_array[$i]];
+        foreach ($point_id_array as $key => $value) {
+            foreach ($member_array as $child) {
+                if ($child->get_id() === $key) {
+                    array_unshift($array, $child);
+                    break;
+                }
+            }
         }
         return $array;
     }
@@ -29,14 +34,22 @@ class Ranking
     {
         $array = array();
         foreach ($member_array as $child) {
-            $array[$child->get_points()] = $child->get_id();
+            $array[$child->get_id()] = $child->get_points();
         }
-        array_multisort($array, SORT_DESC);
+        asort($array, SORT_DESC);
         var_dump($array);
         return $array;
     }
 
-    public function to_html (){
-
+    public function to_html()
+    {
+        $html = '';
+        $i = 0;
+        foreach ($this->ranking_list as $child) {
+            $html = $html . '<tr><th>' . $key . '</th>' . '<th>';
+            $html = (in_array($key, $editable)) ? $html . '<input name="' . $key . '" type="text" value="' . $value . '"></input></th></tr>' : $html . $value . '</th></tr>';
+        }
+        return ($html . '</table>');
     }
+
 }
