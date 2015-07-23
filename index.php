@@ -14,10 +14,7 @@ if (isset($_GET['page']) && in_array($_GET['page'], $whitelist) && ( isset($_SES
     
 }
 
-
-
 $tpl->display('templates/main.tpl');
-
 
 ?>
 
