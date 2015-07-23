@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 13:52:22
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 15:00:36
          compiled from ".\templates\edit.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1863255af8d8e821273-09327458%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1aa376ea60de4f2828ec68bd96423f5dfdbefc68' => 
     array (
       0 => '.\\templates\\edit.tpl',
-      1 => 1437651482,
+      1 => 1437656302,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55af8d8e919736_00543992')) {function content_55af8d8e919736_00543992($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_55af8d8e919736_00543992')) {function content_55af8d8e919736_00543992($_smarty_tpl) {?><link rel="stylesheet" href="./styles/edit.css" />
+<div class="center">
 <form action="index.php?page=edit" method="POST">
     <h1>Dein Profil</h1>
     <p><?php echo $_smarty_tpl->tpl_vars['table']->value;?>
@@ -32,4 +33,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <p><input type="submit" value="Speichern" name="btn"/>
         <input type="submit" value="Passwort aendern" name="btn"/></p>
 </form>
+</div>
 <?php }} ?>
