@@ -1,6 +1,10 @@
 <?php
-session_start();
-session_unset();
-header('Location: index.php?page=login');
+
+if (!isset($_GET['page'])) {
+    echo 'Zugriff verweigert!';
+} else {
+    session_unset();
+    header('Location: index.php?page=login');
+}
 ?>
 

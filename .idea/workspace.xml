@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebe9259b-f2da-4d44-8af6-1f5760325cd1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/game.tpl" afterPath="$PROJECT_DIR$/templates/game.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/game.css" afterPath="$PROJECT_DIR$/styles/game.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/gamelogic.js" afterPath="$PROJECT_DIR$/scripts/gamelogic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="tictactoe.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +29,8 @@
       <file leaf-file-name="gamelogic.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/gamelogic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13179572">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.64415157">
+              <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
               <folding>
                 <element signature="n#!!block;n#delete_field#0" expanded="false" />
                 <element signature="n#!!block;n#win_row#0" expanded="false" />
@@ -46,6 +47,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-13.730769">
               <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/game.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -75,6 +86,7 @@
         <option value="$PROJECT_DIR$/lib/Database.class.php" />
         <option value="$PROJECT_DIR$/edit.php" />
         <option value="$PROJECT_DIR$/templates/game.tpl" />
+        <option value="$PROJECT_DIR$/styles/game.css" />
         <option value="$PROJECT_DIR$/scripts/gamelogic.js" />
       </list>
     </option>
@@ -148,6 +160,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tictactoe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tictactoe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -330,9 +356,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1437641779063" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
-            <marker date="1437641779063" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
-            <marker date="1437641779063" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
+            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
+            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
           </folding>
         </state>
       </provider>
@@ -398,9 +424,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1437641779063" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
-            <marker date="1437641779063" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
-            <marker date="1437641779063" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
+            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
+            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
           </folding>
         </state>
       </provider>
@@ -474,9 +500,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1437641779063" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
-            <marker date="1437641779063" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
-            <marker date="1437641779063" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
+            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
+            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
           </folding>
         </state>
       </provider>
@@ -501,14 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="28" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/menu.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -548,14 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/menu.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -604,9 +614,9 @@
         <state vertical-scroll-proportion="0.79518074">
           <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
           <folding>
-            <marker date="1437641779063" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
-            <marker date="1437641779063" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
-            <marker date="1437641779063" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
+            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
+            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
           </folding>
         </state>
       </provider>
@@ -651,10 +661,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/styles/game.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/gamelogic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13179572">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.64415157">
+          <caret line="23" column="51" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
           <folding>
             <element signature="n#!!block;n#delete_field#0" expanded="false" />
             <element signature="n#!!block;n#win_row#0" expanded="false" />
