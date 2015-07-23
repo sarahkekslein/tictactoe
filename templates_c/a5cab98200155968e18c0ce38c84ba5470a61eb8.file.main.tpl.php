@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-22 15:56:25
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 10:43:14
          compiled from "templates\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2326455adf9afcb7838-56446303%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a5cab98200155968e18c0ce38c84ba5470a61eb8' => 
     array (
       0 => 'templates\\main.tpl',
-      1 => 1437573326,
+      1 => 1437640620,
       2 => 'file',
     ),
   ),
@@ -40,12 +40,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </form>
         <form method="post" action="index.php?page=game">
             <input id="start" type="submit" value="Startseite">
-        </form>  
-    </header>
-    <body>        
+        </form>
+        <form method="post" action="index.php?page=edit">
+            <input id="profile" type="submit" value="Profil">
+        </form>        
         <div id="datum"><?php echo $_smarty_tpl->tpl_vars['month']->value;?>
  20<?php echo $_smarty_tpl->tpl_vars['year']->value;?>
-</div>  
+</div> 
+    </header>
+    <body>         
         <?php if (isset($_smarty_tpl->tpl_vars['tpl_name']->value)) {?>
             <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['tpl_name']->value), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

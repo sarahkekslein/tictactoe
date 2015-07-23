@@ -13,10 +13,13 @@
         </form>
         <form method="post" action="index.php?page=game">
             <input id="start" type="submit" value="Startseite">
-        </form>  
+        </form>
+        <form method="post" action="index.php?page=edit">
+            <input id="profile" type="submit" value="Profil">
+        </form>        
+        <div id="datum">{$month} 20{$year}</div> 
     </header>
-    <body>        
-        <div id="datum">{$month} 20{$year}</div>  
+    <body>         
         {if isset($tpl_name)}
             {include file="$tpl_name"}
         {else}
