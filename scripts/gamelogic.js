@@ -1,9 +1,9 @@
 var current_player = parseInt(Math.random() * 2);
 not_clicked = [11, 12, 13, 21, 22, 23, 31, 32, 33];
-//Spieler=0, KI=1
+var KI =1;
 
 $(function () {
-    if (current_player === 1) {
+    if (current_player === KI) {
         ki_play();
     }
     $('.button').click(function () {
@@ -32,7 +32,7 @@ $(function () {
             .html('');
         not_clicked = [11, 12, 13, 21, 22, 23, 31, 32, 33];
         current_player = parseInt(Math.random() * 2);
-        if (current_player === 1) {
+        if (current_player === KI) {
             ki_play();
         }
     });

@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebe9259b-f2da-4d44-8af6-1f5760325cd1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/game.css" afterPath="$PROJECT_DIR$/styles/game.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/game.tpl" afterPath="$PROJECT_DIR$/templates/game.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/gamelogic.js" afterPath="$PROJECT_DIR$/scripts/gamelogic.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,8 +28,8 @@
       <file leaf-file-name="gamelogic.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/gamelogic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7561779">
-              <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.056013178">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -351,9 +349,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
-            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
-            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1437650385451" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
+            <marker date="1437650385451" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
+            <marker date="1437650385451" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
           </folding>
         </state>
       </provider>
@@ -419,9 +417,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
-            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
-            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1437650385451" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
+            <marker date="1437650385451" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
+            <marker date="1437650385451" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
           </folding>
         </state>
       </provider>
@@ -495,9 +493,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
-            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
-            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1437650385451" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
+            <marker date="1437650385451" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
+            <marker date="1437650385451" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
           </folding>
         </state>
       </provider>
@@ -609,9 +607,9 @@
         <state vertical-scroll-proportion="0.79518074">
           <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
           <folding>
-            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
-            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
-            <marker date="1437644177672" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
+            <marker date="1437650385451" expanded="true" signature="-1:-1" placeholder="SELECT name,..user..." />
+            <marker date="1437650385451" expanded="true" signature="-1:-1" placeholder="SELECT win, ..statistic..." />
+            <marker date="1437650385451" expanded="true" signature="-1:-1" placeholder="UPDATE user ..." />
           </folding>
         </state>
       </provider>
@@ -666,8 +664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/gamelogic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7561779">
-          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.056013178">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="10" />
           <folding />
         </state>
       </provider>
