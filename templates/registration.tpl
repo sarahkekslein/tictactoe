@@ -1,4 +1,4 @@
-<form method="post" action="index.registration_post.php">
+<form method="post" action="index.php?page=registration_post">
     Name: <input type="text" name="name"/>
     </br>
     Email <input type="text" name="email"/>

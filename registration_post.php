@@ -19,28 +19,19 @@ if (!isset($_GET['page'])) {
     if (count($result) > 0 || $password === '' || $password2 === '' || $username === '' || $email === '') {
         header('Location: index.php?page=registration&fail=1');
     } else {
-        if ($password . length < 8) {
+        if (strlen($password) < 8) {
             header('Location: index.php?page=registration&fail=2');
         } else if ($password !== $password2) {
             header('Location: index.php?page=registration&fail=3');
-            $statement = $connection->prepare("SELECT * FROM user WHERE name = :name");
-            $statement->bindValue(':name', $username);
+        } else {
+            $statement = $connection->prepare("INSERT INTO user (name, password, email) VALUES (:name, :password, :email)");
+            $statement->bindValue(':name', $_POST['name']);
+            $statement->bindValue(':password', password_hash($_POST['pw'], PASSWORD_DEFAULT));
+            $statement->bindValue(':email', $_POST['email']);
             $statement->execute();
-            $result = $statement->fetchAll();
             $statement->closeCursor();
 
-            if (count($result) > 0 || $password === '' || $username === '' || $email === '') {
-                header('Location: index.php?page=registration&fail=1');
-            } else {
-                $statement = $connection->prepare("INSERT INTO user (name, password, email) VALUES (:name, :password, :email)");
-                $statement->bindValue(':name', $_POST['name']);
-                $statement->bindValue(':password', password_hash($_POST['pw'], PASSWORD_DEFAULT));
-                $statement->bindValue(':email', $_POST['email']);
-                $statement->execute();
-                $statement->closeCursor();
-
-                header('Location: index.php?page=game');
-            }
+            header('Location: index.php?page=game');
         }
     }
 }

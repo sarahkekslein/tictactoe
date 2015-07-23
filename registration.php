@@ -5,13 +5,13 @@ if (!isset($_GET['page'])) {
 } else {
 if (isset($_GET['fail'])) {
     $fehler = $_GET['fail'];
-    if ($fehler === 1) {
+    if ($fehler === '1') {
         $tpl->assign('message', 'Probier es noch einmal!');
     }
-    if ($fehler === 2) {
+    if ($fehler === '2') {
         $tpl->assign('message', 'Das Passwort ist zu kurz!');
     }
-    if ($fehler === 3) {
+    if ($fehler === '3') {
         $tpl->assign('message', 'Die Passwörter stimmen nicht überein!');
     }
 }
