@@ -1,16 +1,17 @@
 var current_player = parseInt(Math.random() * 2);
 not_clicked = [11, 12, 13, 21, 22, 23, 31, 32, 33];
-//Spieler=0, KI=1
+var KI = 1;
+var WIN = 2, TIE = 1, LOSE = 0;
 
 $(function () {
-    if (current_player === 1) {
+    if (current_player === KI) {
         ki_play();
     }
     $('.button').click(function () {
         $(this)
-                .css('background-color', '#00FF00')
-                .prop('disabled', true)
-                .html('X');
+            .css('background-color', '#00FF00')
+            .prop('disabled', true)
+            .html('X');
 
         var id = parseInt($(this).attr('id').substring(3));
 
@@ -32,7 +33,7 @@ $(function () {
             .html('');
         not_clicked = [11, 12, 13, 21, 22, 23, 31, 32, 33];
         current_player = parseInt(Math.random() * 2);
-        if (current_player === 1) {
+        if (current_player === KI) {
             ki_play();
         }
     });
@@ -49,8 +50,8 @@ function ki_play() {
     }
     var field = not_clicked[random_number];
     $('#btn' + field)
-            .css('background-color', '#FF0000')
-            .prop('disabled', true)
+        .css('background-color', '#FF0000')
+        .prop('disabled', true)
         .html('O');
 
     not_clicked = delete_field(not_clicked, random_number);
@@ -70,33 +71,39 @@ function delete_field(list, index) {
 
 function win_row() {
     if ($('#btn11').css('background-color') === $('#btn12').css('background-color')
-            && $('#btn12').css('background-color') === $('#btn13').css('background-color')
-            && $('#btn11').css('background-color') !== 'rgb(220, 220, 220)') {
+        && $('#btn12').css('background-color') === $('#btn13').css('background-color')
+        && $('#btn11').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn11').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
+            upload(LOSE);
             return true;
         } else {
             alert("Du hast gewonnen :)");
+            upload(WIN);
             return true;
         }
     } else if ($('#btn21').css('background-color') === $('#btn22').css('background-color')
-            && $('#btn22').css('background-color') === $('#btn23').css('background-color')
-            && $('#btn21').css('background-color') !== 'rgb(220, 220, 220)') {
+        && $('#btn22').css('background-color') === $('#btn23').css('background-color')
+        && $('#btn21').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn21').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
+            upload(LOSE);
             return true;
         } else {
             alert("Du hast gewonnen :)");
+            upload(WIN);
             return true;
         }
     } else if ($('#btn31').css('background-color') === $('#btn32').css('background-color')
-            && $('#btn32').css('background-color') === $('#btn33').css('background-color')
-            && $('#btn31').css('background-color') !== 'rgb(220, 220, 220)') {
+        && $('#btn32').css('background-color') === $('#btn33').css('background-color')
+        && $('#btn31').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn31').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
+            upload(LOSE);
             return true;
         } else {
             alert("Du hast gewonnen :)");
+            upload(WIN);
             return true;
         }
     }
@@ -105,33 +112,39 @@ function win_row() {
 
 function win_colum() {
     if ($('#btn11').css('background-color') === $('#btn21').css('background-color')
-            && $('#btn21').css('background-color') === $('#btn31').css('background-color')
-            && $('#btn11').css('background-color') !== 'rgb(220, 220, 220)') {
+        && $('#btn21').css('background-color') === $('#btn31').css('background-color')
+        && $('#btn11').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn11').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
+            upload(LOSE);
             return true;
         } else {
             alert("Du hast gewonnen :)");
+            upload(WIN);
             return true;
         }
     } else if ($('#btn12').css('background-color') === $('#btn22').css('background-color')
-            && $('#btn22').css('background-color') === $('#btn32').css('background-color')
-            && $('#btn12').css('background-color') !== 'rgb(220, 220, 220)') {
+        && $('#btn22').css('background-color') === $('#btn32').css('background-color')
+        && $('#btn12').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn12').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
+            upload(LOSE);
             return true;
         } else {
             alert("Du hast gewonnen :)");
+            upload(WIN);
             return true;
         }
     } else if ($('#btn13').css('background-color') === $('#btn23').css('background-color')
-            && $('#btn23').css('background-color') === $('#btn33').css('background-color')
-            && $('#btn13').css('background-color') !== 'rgb(220, 220, 220)') {
+        && $('#btn23').css('background-color') === $('#btn33').css('background-color')
+        && $('#btn13').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn13').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
+            upload(LOSE);
             return true;
         } else {
             alert("Du hast gewonnen :)");
+            upload(WIN);
             return true;
         }
     }
@@ -140,23 +153,27 @@ function win_colum() {
 
 function win_diagonal() {
     if ($('#btn11').css('background-color') === $('#btn22').css('background-color')
-            && $('#btn22').css('background-color') === $('#btn33').css('background-color')
-            && $('#btn11').css('background-color') !== 'rgb(220, 220, 220)') {
+        && $('#btn22').css('background-color') === $('#btn33').css('background-color')
+        && $('#btn11').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn11').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
+            upload(LOSE);
             return true;
         } else {
             alert("Du hast gewonnen :)");
+            upload(WIN);
             return true;
         }
     } else if ($('#btn31').css('background-color') === $('#btn22').css('background-color')
-            && $('#btn22').css('background-color') === $('#btn13').css('background-color')
-            && $('#btn31').css('background-color') !== 'rgb(220, 220, 220)') {
+        && $('#btn22').css('background-color') === $('#btn13').css('background-color')
+        && $('#btn31').css('background-color') !== 'rgb(220, 220, 220)') {
         if ($('#btn31').css('background-color') === 'rgb(255, 0, 0)') {
             alert("Der Computer hat gewonnen :(");
+            upload(LOSE);
             return true;
         } else {
             alert("Du hast gewonnen :)");
+            upload(WIN);
             return true;
         }
     }
@@ -165,15 +182,16 @@ function win_diagonal() {
 
 function tie() {
     if ($('#btn11').css('background-color') !== ('rgb(220, 220, 220)')
-            && $('#btn12').css('background-color') !== ('rgb(220, 220, 220)')
-            && $('#btn13').css('background-color') !== ('rgb(220, 220, 220)')
-            && $('#btn21').css('background-color') !== ('rgb(220, 220, 220)')
-            && $('#btn22').css('background-color') !== ('rgb(220, 220, 220)')
-            && $('#btn23').css('background-color') !== ('rgb(220, 220, 220)')
-            && $('#btn31').css('background-color') !== ('rgb(220, 220, 220)')
-            && $('#btn32').css('background-color') !== ('rgb(220, 220, 220)')
-            && $('#btn33').css('background-color') !== ('rgb(220, 220, 220)')) {
+        && $('#btn12').css('background-color') !== ('rgb(220, 220, 220)')
+        && $('#btn13').css('background-color') !== ('rgb(220, 220, 220)')
+        && $('#btn21').css('background-color') !== ('rgb(220, 220, 220)')
+        && $('#btn22').css('background-color') !== ('rgb(220, 220, 220)')
+        && $('#btn23').css('background-color') !== ('rgb(220, 220, 220)')
+        && $('#btn31').css('background-color') !== ('rgb(220, 220, 220)')
+        && $('#btn32').css('background-color') !== ('rgb(220, 220, 220)')
+        && $('#btn33').css('background-color') !== ('rgb(220, 220, 220)')) {
         alert("Keiner hat gewonnen :/");
+        upload(TIE);
         return true;
     }
     return false;
@@ -184,4 +202,30 @@ function win_or_game_end() {
         return true;
     }
     return false;
+}
+
+function upload($winner) {
+
+    $('#chat_partner').keyup(function () {
+        var content = $('#chat_partner').val();
+        $.ajax({
+            type: 'POST',
+            url: 'chat.json.php',
+            data: {
+                "content": content
+            },
+            async: false
+
+        }).done(function (result) {
+            alert(result[0]['name']);
+            for (var i in result) {
+                $('#proposal').append(result[i]['name']);
+            }
+            $('#proposal').show();
+        }).fail(function () {
+            dialog.show('Fehler', 'Es ist ein Fehler aufgetreten. Bitte laden Sie\n\
+                     die Seite neu.');
+        });
+
+    });
 }
