@@ -1,8 +1,7 @@
 <?php
 if(!isset($_GET['page'])) {
     echo 'Zugriff verweigert!';
-} else {  
+} else {    
     $tpl->assign('tpl_name', $_GET['page'] . ".tpl");
 }
 ?>
-
