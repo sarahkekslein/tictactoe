@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 12:16:21
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 13:48:03
          compiled from ".\templates\game.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:595955b0bef5f18499-11162858%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a05bce66d7c8316f38af6e01ef8b169867ce4e02' => 
     array (
       0 => '.\\templates\\game.tpl',
-      1 => 1437646419,
+      1 => 1437651484,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.20',
   'unifunc' => 'content_55b0bef5f37f60_29784630',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_55b0bef5f37f60_29784630')) {function content_55b0bef5f37f60_29784630($_smarty_tpl) {?><script src="./scripts/gamelogic.js"></script>
 <link rel="stylesheet" href="./styles/game.css" />
 <div id="current_player"></div>
-<table>
+<br/>
+<table class="center">
     <tr>
         <td><button id="btn11" class="button"></button></td>
         <td><button id="btn12" class="button"></button></td>
@@ -39,6 +40,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <td><button id="btn33" class="button"></button></td>
     </tr>
 </table>
-
+<br/>
 <button id="new_game">Neues Spiel</button>
 <?php }} ?>
