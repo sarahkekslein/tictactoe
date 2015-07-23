@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 12:48:27
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 14:30:03
          compiled from "templates\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2326455adf9afcb7838-56446303%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a5cab98200155968e18c0ce38c84ba5470a61eb8' => 
     array (
       0 => 'templates\\main.tpl',
-      1 => 1437648462,
+      1 => 1437654597,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'isLoggedIn' => 0,
-    'month' => 0,
-    'year' => 0,
     'tpl_name' => 0,
   ),
   'has_nocache_code' => false,
@@ -36,22 +34,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <script src="./scripts/jquery.js"></script>    
     </head>
     <?php if ($_smarty_tpl->tpl_vars['isLoggedIn']->value) {?>
-        <header>
-            <form method="post" action="index.php?page=logout">
-                <input id="logout" type="submit" value="Logout">
-            </form>
+        <header class="header">
             <form method="post" action="index.php?page=game">
-                <input id="start" type="submit" value="Zum Spiel">
+                <input id="start" type="submit" value="Zum Spiel" class="menu">
             </form>
             <form method="post" action="index.php?page=edit">
-                <input id="profile" type="submit" value="Profil">
-            </form>             
+                <input id="profile" type="submit" value="Profil" class="menu">
+            </form>
             <form method="post" action="index.php?page=chat">
-                <input id="chat" type="submit" value="Chat">
-            </form> 
-            <div id="datum"><?php echo $_smarty_tpl->tpl_vars['month']->value;?>
- 20<?php echo $_smarty_tpl->tpl_vars['year']->value;?>
-</div> 
+                <input id="chat" type="submit" value="Chat" class="menu">
+            </form>
+            <form method="post" action="index.php?page=logout">
+                <input id="logout" type="submit" value="Logout" class="menu">
+            </form>
         </header>
     <?php }?>
     <body>         
@@ -65,9 +60,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </body> 
     <footer> 
         <div>
-        <a href ="index.php?page=imprint">Impressum </a>
-        |
-        <a href ="index.php?page=contact"> Kontakt</a> 
+            <a href ="index.php?page=imprint">Impressum </a>
+            |
+            <a href ="index.php?page=contact"> Kontakt</a> 
         </div>
     </footer>
 </html><?php }} ?>

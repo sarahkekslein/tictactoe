@@ -37,19 +37,29 @@ class Ranking
             $array[$child->get_id()] = $child->get_points();
         }
         asort($array, SORT_DESC);
-        var_dump($array);
         return $array;
     }
 
     public function to_html()
     {
-        $html = '';
-        $i = 0;
+        $html = "";
+        $i = 1;
         foreach ($this->ranking_list as $child) {
-            $html = $html . '<tr><th>' . $key . '</th>' . '<th>';
-            $html = (in_array($key, $editable)) ? $html . '<input name="' . $key . '" type="text" value="' . $value . '"></input></th></tr>' : $html . $value . '</th></tr>';
+            $html = $html . "<tr>";
+            $array = array();
+            $array['rank'] = $i;
+            $array['name'] = $child->get_name();
+            $array['points'] = $child->get_points();
+            $array['games'] = $child->get_games();
+            $array['win'] = $child->get_win();
+            $array['tie'] = $child->get_tie();
+            $array['lose'] = $child->get_lose();
+            foreach ($array as $key => $value) {
+                $html = $html . "<th>$value</th>";
+            }
+            $html = $html . "</tr>";
+            $i++;
         }
-        return ($html . '</table>');
+        return $html;
     }
-
 }

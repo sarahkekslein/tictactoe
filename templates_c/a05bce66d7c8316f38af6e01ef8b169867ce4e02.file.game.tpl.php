@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 13:48:03
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 15:00:27
          compiled from ".\templates\game.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:595955b0bef5f18499-11162858%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a05bce66d7c8316f38af6e01ef8b169867ce4e02' => 
     array (
       0 => '.\\templates\\game.tpl',
-      1 => 1437651484,
+      1 => 1437656302,
       2 => 'file',
     ),
   ),
@@ -41,5 +41,4 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </tr>
 </table>
 <br/>
-<button id="new_game">Neues Spiel</button>
-<?php }} ?>
+<button id="new_game" class="new_game_button">Neues Spiel</button><?php }} ?>
