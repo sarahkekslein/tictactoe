@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-24 09:34:07
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-24 11:26:19
          compiled from ".\templates\edit.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1863255af8d8e821273-09327458%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1aa376ea60de4f2828ec68bd96423f5dfdbefc68' => 
     array (
       0 => '.\\templates\\edit.tpl',
-      1 => 1437723243,
+      1 => 1437729489,
       2 => 'file',
     ),
   ),
@@ -28,8 +28,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="center">
 <form action="index.php?page=edit" method="POST">
     <h1>Dein Profil</h1>
-    <p><?php echo $_smarty_tpl->tpl_vars['table']->value;?>
-</p>
+    <p><table><?php echo $_smarty_tpl->tpl_vars['table']->value;?>
+</table></p>
     <p><input type="submit" value="Speichern" name="btn"/>
         <input type="submit" value="Passwort aendern" name="btn"/></p>
 </form>

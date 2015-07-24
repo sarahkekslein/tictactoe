@@ -10,7 +10,7 @@
             <th>Gewonnen</th>
             <th>Unentschieden</th>
             <th>Verloren</th>
-        </tr>
+        </tr><tr><td>&nbsp</td></tr>
         {$ranking}
     </table>
 </div>

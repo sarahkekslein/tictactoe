@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 14:59:17
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-24 11:25:21
          compiled from ".\templates\ranking.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:68955b0e331c824d0-29136760%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '55b6f3e5f77744e04999bcd93586e2e181affcc5' => 
     array (
       0 => '.\\templates\\ranking.tpl',
-      1 => 1437656305,
+      1 => 1437729489,
       2 => 'file',
     ),
   ),
@@ -23,16 +23,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_55b0e331d08ad7_62442557')) {function content_55b0e331d08ad7_62442557($_smarty_tpl) {?><h1>Rangliste</h1>
-<table>
-    <tr>
-        <th>Rang</th>
-        <th>Name</th>
-        <th>Punkte</th>
-        <th>Spiele</th>
-        <th>Gewonnen</th>
-        <th>Unentschieden</th>
-        <th>Verloren</th>
-    </tr>
-    <?php echo $_smarty_tpl->tpl_vars['ranking']->value;?>
-</table><?php }} ?>
+<?php if ($_valid && !is_callable('content_55b0e331d08ad7_62442557')) {function content_55b0e331d08ad7_62442557($_smarty_tpl) {?><link rel="stylesheet" href="./styles/ranking.css">
+<div class="center">
+    <h1>Rangliste</h1>
+    <table>
+        <tr>
+            <th>Rang</th>
+            <th>Name</th>
+            <th>Punkte</th>
+            <th>Spiele</th>
+            <th>Gewonnen</th>
+            <th>Unentschieden</th>
+            <th>Verloren</th>
+        </tr><tr><td>&nbsp</td></tr>
+        <?php echo $_smarty_tpl->tpl_vars['ranking']->value;?>
+
+    </table>
+</div><?php }} ?>
