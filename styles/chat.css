@@ -1,3 +1,22 @@
-.textarea {
+.center {
+    margin: 0px 30%;
+    width: 40%;
+    text-align: center;
 }
 
+.button {
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: grey;
+    color: greenyellow;
+}
+
+.textarea {
+    width: 60%;
+    height: 100px;
+}
+
+.textfield {
+    width: 60%;
+}

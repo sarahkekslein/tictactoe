@@ -9,6 +9,7 @@
     <h1 class="blue">
         Toe
     </h1>
+    <div class="image"></div>
     <div id="button">
         <form id="register" method="post" action="index.php?page=registration">
             <input type="submit" value="Registrieren" class="button">
