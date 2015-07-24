@@ -150,7 +150,7 @@ function win_diagonal() { // prüft, ob in einer Diagonale alle Felder gleich sin
 
 function tie() { // prüft, ob alle Felder belegt sind, also keiner gewonnen hat
     if (not_clicked.length === 0) {
-        upload(TIE);
+        return upload(TIE);
     }
     return false;
 }
