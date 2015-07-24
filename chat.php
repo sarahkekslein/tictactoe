@@ -37,6 +37,8 @@ if (!isset($_GET['page'])) {
         $tpl->assign('message', $content);
     }
     
-$tpl->assign('tpl_name', $_GET['page'] . ".tpl");
+    $tpl->assign('tpl_name', $_GET['page'] . ".tpl");
+} else {
+    $tpl->assign('tpl_name', $_GET['page'] . ".tpl");
 }
 ?>

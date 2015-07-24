@@ -9,28 +9,35 @@ if (!isset($_GET['page'])) {
     $email = $_POST['name'];
 
 
+    if (empty($_POST['pw']) || empty($_POST['name'])) {
+        header('Location:index.php?page=login&fail=1');
+    } else {
+
+        $statement = $connection->prepare("SELECT password FROM user WHERE name = :username OR email =:email");
+        $statement->bindValue(':username', $username);
+        $statement->bindValue(':email', $email);
+        $statement->execute();
+        $hash = $statement->fetch();
+        $statement->closeCursor();
+
+        $statement = $connection->prepare("SELECT id FROM user WHERE name = :username OR email =:email");
+        $statement->bindValue(':username', $username);
+        $statement->bindValue(':email', $email);
+        $statement->execute();
+        $id = $statement->fetch();
+        $statement->closeCursor();
 
 
-    $statement = $connection->prepare("SELECT password FROM user WHERE name = :username OR email =:email");
-    $statement->bindValue(':username', $username);
-    $statement->bindValue(':email', $email);
-    $statement->execute();
-    $hash = $statement->fetch();
-    $statement->closeCursor();
-
-    $statement = $connection->prepare("SELECT id FROM user WHERE name = :username OR email =:email");
-    $statement->bindValue(':username', $username);
-    $statement->bindValue(':email', $email);
-    $statement->execute();
-    $id = $statement->fetch();
-    $statement->closeCursor();
-
-    if ($hash !== false) {
-        if (password_verify($password, $hash['password'])) {
-            $_SESSION['user'] = $id['id'];
-            header('Location:index.php?page=game');
+        if ($hash !== false) {
+            if (password_verify($password, $hash['password'])) {
+                $_SESSION['user'] = $id['id'];
+                header('Location:index.php?page=game');
+            } else {
+                header('Location:index.php?page=login&fail=2');
+            }
+        } else {
+            header('Location:index.php?page=login&fail=3');
         }
     }
-    header('Location:index.php?page=login&fail=1');
 }
 ?>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.20, created on 2015-07-24 11:13:30
+=======
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 12:16:02
+>>>>>>> origin/master
          compiled from ".\templates\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:299055afcdb26a7777-50468648%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +11,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '00547688a9f4908775bd8d48f7837a569117b6b7' => 
     array (
       0 => '.\\templates\\login.tpl',
+<<<<<<< HEAD
       1 => 1437727257,
+=======
+      1 => 1437646419,
+>>>>>>> origin/master
       2 => 'file',
     ),
   ),
@@ -23,6 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
+<<<<<<< HEAD
 <?php if ($_valid && !is_callable('content_55afcdb26cca62_87737562')) {function content_55afcdb26cca62_87737562($_smarty_tpl) {?><link rel="stylesheet" href="./styles/index.css" />
 <div class="center">
     <h1 class="red">
@@ -60,3 +69,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <input type="submit" value="=> Registrieren" class="button"><br/>
     </form>
 </div><?php }} ?>
+=======
+<?php if ($_valid && !is_callable('content_55afcdb26cca62_87737562')) {function content_55afcdb26cca62_87737562($_smarty_tpl) {?><form method="post" action="index.php?page=login_post">
+    Benutzername: <input type="text" name="name"/>
+    </br>
+    Passwort: <input type="password" name="pw"/>
+    </br>
+    <input type="submit" value="Anmelden"><br/>
+</form><?php }} ?>
+>>>>>>> origin/master
