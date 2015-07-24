@@ -9,7 +9,7 @@ $statement->execute();
 $result = $statement->fetchAll();
 $proposals = array();
 foreach($result as $proposal) {
-    $proposals[] = $proposol['name'];
+    $proposals[] = $proposal['name'];
 }
 echo json_encode($proposals);
 ?>
