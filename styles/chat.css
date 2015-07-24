@@ -12,6 +12,10 @@
     color: greenyellow;
 }
 
+#message {
+    color: red;
+}
+
 .textarea {
     width: 60%;
     height: 100px;
