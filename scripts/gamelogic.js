@@ -39,11 +39,11 @@ $(function () {
     });
 });
 
-function set_buttons_inactive() {
+function set_buttons_inactive() { //diabled alle Felder des Spielfelds
     $('.button').prop('disabled', true);
 }
 
-function ki_play() {
+function ki_play() { // führt den Spielzug der KI aus
     var random_number = parseInt(Math.random() * (not_clicked.length + 1));
     while (random_number === not_clicked.length) {
         random_number = parseInt(Math.random() * (not_clicked.length + 1));
@@ -57,7 +57,7 @@ function ki_play() {
     not_clicked = delete_field(not_clicked, random_number);
 }
 
-function delete_field(list, index) {
+function delete_field(list, index) { //löscht aus dem Array list das Element an der Stelle index
     var j = 0;
     var not_clicked_new = [];
     for (var i = 0; i < not_clicked.length; i++) {
@@ -69,7 +69,7 @@ function delete_field(list, index) {
     return not_clicked_new;
 }
 
-function win_row() {
+function win_row() { // prüft, ob in einer Reihe alle Felder gleich sind, also einer gewonnen hat
     if ($('#btn11').css('background-color') === $('#btn12').css('background-color')
         && $('#btn12').css('background-color') === $('#btn13').css('background-color')
         && $('#btn11').css('background-color') !== 'rgb(220, 220, 220)') {
@@ -98,7 +98,7 @@ function win_row() {
     return false;
 }
 
-function win_colum() {
+function win_colum() { // prüft, ob in einer Spalte alle Felder gleich sind, also einer gewonnen hat
     if ($('#btn11').css('background-color') === $('#btn21').css('background-color')
         && $('#btn21').css('background-color') === $('#btn31').css('background-color')
         && $('#btn11').css('background-color') !== 'rgb(220, 220, 220)') {
@@ -127,7 +127,7 @@ function win_colum() {
     return false;
 }
 
-function win_diagonal() {
+function win_diagonal() { // prüft, ob in einer Diagonale alle Felder gleich sind, also einer gewonnen hat
     if ($('#btn11').css('background-color') === $('#btn22').css('background-color')
         && $('#btn22').css('background-color') === $('#btn33').css('background-color')
         && $('#btn11').css('background-color') !== 'rgb(220, 220, 220)') {
@@ -148,29 +148,21 @@ function win_diagonal() {
     return false;
 }
 
-function tie() {
-    if ($('#btn11').css('background-color') !== ('rgb(220, 220, 220)')
-        && $('#btn12').css('background-color') !== ('rgb(220, 220, 220)')
-        && $('#btn13').css('background-color') !== ('rgb(220, 220, 220)')
-        && $('#btn21').css('background-color') !== ('rgb(220, 220, 220)')
-        && $('#btn22').css('background-color') !== ('rgb(220, 220, 220)')
-        && $('#btn23').css('background-color') !== ('rgb(220, 220, 220)')
-        && $('#btn31').css('background-color') !== ('rgb(220, 220, 220)')
-        && $('#btn32').css('background-color') !== ('rgb(220, 220, 220)')
-        && $('#btn33').css('background-color') !== ('rgb(220, 220, 220)')) {
+function tie() { // prüft, ob alle Felder belegt sind, also keiner gewonnen hat
+    if (not_clicked.lenght === 0) {
         upload(TIE);
     }
     return false;
 }
 
-function win_or_game_end() {
+function win_or_game_end() { // prüft, ob einer gewonnen hat oder unentschieden ist
     if (win_row() || win_colum() || win_diagonal() || tie()) {
         return true;
     }
     return false;
 }
 
-function upload(winner) {
+function upload(winner) { // läd das Ergebnis des Spiels in die Datenbank, gibt den Gewinner aus und beendet das Spiel
     $.post('upload_winner.json.php', {content: winner});
     switch (winner) {
         case TIE :
