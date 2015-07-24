@@ -45,7 +45,7 @@ class Ranking
         $html = "";
         $i = 1;
         foreach ($this->ranking_list as $child) {
-            $html = $html . "<tr>";
+            $html = $html . '<tr align="center">';
             $array = array();
             $array['rank'] = $i;
             $array['name'] = $child->get_name();
@@ -55,7 +55,7 @@ class Ranking
             $array['tie'] = $child->get_tie();
             $array['lose'] = $child->get_lose();
             foreach ($array as $key => $value) {
-                $html = $html . "<th>$value</th>";
+                $html = $html . "<td >$value</td>";
             }
             $html = $html . "</tr>";
             $i++;

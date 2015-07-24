@@ -1,5 +1,9 @@
 .center {
-    width: 20%;
     margin: 0px 40%;
     text-align: center;
+}
+
+.description {
+    width: 500px;
+    text-align: left;
 }

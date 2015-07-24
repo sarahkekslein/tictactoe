@@ -20,16 +20,15 @@ function update_player_info($id, $statement, $db_connection = null)
 
 function data_to_html($data)
 {
-    $html = '<table id ="abc"';
-    $html .= '<tr><th> Name </th><th id="name"> ' . $data['name'] . '</th><th><input type="submit" value="bearbeiten" name="change_name" id="change_name"/></th></tr>';
-    $html .= '<tr><th> Email </th><th id="email"> ' . $data['email'] . '</th><th><input type="submit" value="bearbeiten" name="change_email" id="change_email"/></th></tr>';
-    $html .= '<tr><th> Punkte </th><th>' . ($data['win'] - $data['lose']) . '</th></tr>';
-    $html .= '<tr><th> Spiele  </th><th>' . ($data['tie'] + $data['win'] + $data['lose']) . '</th></tr>';
-    $html .= '<tr><th> Gewonnen </th><th>' . $data['win'] . '</th></tr>';
-    $html .= '<tr><th> Unentschieden </th><th>' . $data['tie'] . '</th></tr>';
-    $html .= '<tr><th> Verloren </th><th>' . $data['lose'] . '</th></tr>';
-    $html .= '<tr><th> Über dich </th><th id="description">' . $data['description'] . '</th><th><input type="submit" value="bearbeiten" name="change_description" id="change_description"/></th></tr>';
-    return ($html . '</table>');
+    $html = '<tr><th> Name </th><td id="name"> ' . $data['name'] . '</td><td><input type="submit" value="bearbeiten" name="change_name" id="change_name"/></td></tr>';
+    $html .= '<tr><th> Email </th><td id="email"> ' . $data['email'] . '</td><td><input type="submit" value="bearbeiten" name="change_email" id="change_email"/></td></tr>';
+    $html .= '<tr><th> Punkte </th><td>' . ($data['win'] - $data['lose']) . '</td></tr>';
+    $html .= '<tr><th> Spiele  </th><td>' . ($data['tie'] + $data['win'] + $data['lose']) . '</td></tr>';
+    $html .= '<tr><th> Gewonnen </th><td>' . $data['win'] . '</td></tr>';
+    $html .= '<tr><th> Unentschieden </th><td>' . $data['tie'] . '</td></tr>';
+    $html .= '<tr><th> Verloren </th><td>' . $data['lose'] . '</td></tr>';
+    $html .= '<tr><th> Über dich </th><td class="description">' . $data['description'] . '</td><th><input type="submit" value="bearbeiten" name="change_description" id="change_description"/></th></tr>';
+    return $html;
 }
 
 function create_site($tpl)
