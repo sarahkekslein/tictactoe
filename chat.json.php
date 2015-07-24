@@ -7,6 +7,10 @@ $statement = $connection->prepare("SELECT name FROM user WHERE name LIKE :conten
 $statement->bindValue(':content', $content . '%');
 $statement->execute();
 $result = $statement->fetchAll();
-json_encode($result);
+$proposals = array();
+foreach($result as $proposal) {
+    $proposals[] = $proposol['name'];
+}
+echo json_encode($proposals);
 ?>
 

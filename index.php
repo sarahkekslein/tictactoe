@@ -6,7 +6,7 @@ $tpl = new Smarty();
 
 $tpl->assign('isLoggedIn', isset($_SESSION['user']));
 
-$whitelist = array('login', 'logout', 'edit', 'game', 'login_post', 'registration', 'registration_post', 'chat', 'ranking');
+$whitelist = array('login', 'logout', 'edit', 'game', 'login_post', 'registration', 'registration_post', 'chat', 'ranking', 'chat_post');
 $notLoggedIn = array('login', 'registration', 'registration_post', 'login_post');
 
 if (isset($_GET['page']) && in_array($_GET['page'], $whitelist) && ( isset($_SESSION['user']) || in_array($_GET['page'], $notLoggedIn))) {

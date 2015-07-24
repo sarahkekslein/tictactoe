@@ -8,13 +8,13 @@ $(document).ready(function () {
             url: 'chat.json.php',
             data: {
                 "content": content
-            },
-            async: false
+            }
 
         }).done(function (result) {
-            alert(result[0]['name']);
+            var proposals = JSON.parse(result);
+            alert(proposals);
             for(var i in result) {
-                $('#proposal').append(result[i]['name']);
+                $('#proposal').append(result[i]);
             }
             $('#proposal').show();
         }).fail(function () {
