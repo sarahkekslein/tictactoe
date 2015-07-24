@@ -35,4 +35,8 @@ $(document).ready(function () {
     $('#proposal').change(function () {
         $('#chat_partner').prop('value', $('#proposal').val());
     });
+    
+    $('#proposal').click(function () {
+        $('#chat_partner').prop('value', $('#proposal').val());
+    });
 });
