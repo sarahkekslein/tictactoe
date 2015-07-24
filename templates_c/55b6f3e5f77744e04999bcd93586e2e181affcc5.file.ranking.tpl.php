@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-24 10:11:27
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-24 11:25:21
          compiled from ".\templates\ranking.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:68955b0e331c824d0-29136760%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '55b6f3e5f77744e04999bcd93586e2e181affcc5' => 
     array (
       0 => '.\\templates\\ranking.tpl',
-      1 => 1437725315,
+      1 => 1437729489,
       2 => 'file',
     ),
   ),
@@ -35,7 +35,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <th>Gewonnen</th>
             <th>Unentschieden</th>
             <th>Verloren</th>
-        </tr>
+        </tr><tr><td>&nbsp</td></tr>
         <?php echo $_smarty_tpl->tpl_vars['ranking']->value;?>
 
     </table>

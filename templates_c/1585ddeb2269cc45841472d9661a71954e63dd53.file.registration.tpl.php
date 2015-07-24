@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-24 10:09:42
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-24 11:24:28
          compiled from ".\templates\registration.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1159955afcdb67a8fe3-76435411%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1585ddeb2269cc45841472d9661a71954e63dd53' => 
     array (
       0 => '.\\templates\\registration.tpl',
-      1 => 1437725315,
+      1 => 1437729493,
       2 => 'file',
     ),
   ),
@@ -37,6 +37,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <h1>
         Registrierung
     </h1>
+    <div class='red'><?php if (isset($_smarty_tpl->tpl_vars['message']->value)) {?>        
+            <?php echo $_smarty_tpl->tpl_vars['message']->value;?>
+
+        <?php }?></div>
     <form method="post" action="index.php?page=registration_post">
         <table>
             <tr>
@@ -58,10 +62,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </table>
         <br />
         <input type="submit" value="jetzt registrieren" class="button"><br/>
-        <?php if (isset($_smarty_tpl->tpl_vars['message']->value)) {?>        
-            <?php echo $_smarty_tpl->tpl_vars['message']->value;?>
-
-        <?php }?>
     </form>
     <br />
     <form method="post" action="index.php?page=login">

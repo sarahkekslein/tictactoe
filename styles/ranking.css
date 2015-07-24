@@ -10,3 +10,8 @@ h1 {
     width: 10%;
     margin: 20px 45%;
 }
+
+td {
+    width: 1%
+    position: center;
+}
