@@ -12,6 +12,9 @@
     <h1>
         Registrierung
     </h1>
+    <div class='red'>{if isset($message)}        
+            {$message}
+        {/if}</div>
     <form method="post" action="index.php?page=registration_post">
         <table>
             <tr>
@@ -33,9 +36,6 @@
         </table>
         <br />
         <input type="submit" value="jetzt registrieren" class="button"><br/>
-        {if isset($message)}        
-            {$message}
-        {/if}
     </form>
     <br />
     <form method="post" action="index.php?page=login">
