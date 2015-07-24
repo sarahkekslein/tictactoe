@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 14:59:17
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-24 09:36:36
          compiled from "templates\main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:753555ae43003070c5-17770242%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4524841ba6e5f2582af5404a81310d3a23649a76' => 
     array (
       0 => 'templates\\main.tpl',
-      1 => 1437656302,
+      1 => 1437723370,
       2 => 'file',
     ),
   ),
@@ -43,6 +43,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </form>
             <form method="post" action="index.php?page=chat">
                 <input id="chat" type="submit" value="Chat" class="menu">
+            </form>
+            <form method="post" action="index.php?page=ranking">
+                <input id="ranking" type="submit" value="Ranking" class="menu">
             </form>
             <form method="post" action="index.php?page=logout">
                 <input id="logout" type="submit" value="Logout" class="menu">

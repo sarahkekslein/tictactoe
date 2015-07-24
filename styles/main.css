@@ -32,6 +32,10 @@ footer a {
     font-weight: bold
 }
 
+.menu action:focus action:hover action:click{
+    background-color: red;
+}
+
 .header {
     height: 50px;
 }
