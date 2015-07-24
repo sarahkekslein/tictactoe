@@ -18,23 +18,24 @@ function update_player_info($id, $statement, $db_connection = null)
     $db_statement->execute();
 }
 
-function data_to_html($data, $editable)
+function data_to_html($data)
 {
-    $html = '<table>';
-    foreach ($data as $key => $value) {
-        if ($key !== 'password' && $key !== 'id') {
-            $html = $html . '<tr><th>' . $key . '</th>' . '<th>';
-            $html = (in_array($key, $editable)) ? $html . '<input name="' . $key . '" type="text" value="' . $value . '"></input></th></tr>' : $html . $value . '</th></tr>';
-        }
-    }
+    $html = '<table id ="abc"';
+    $html .= '<tr><th> Name </th><th id="name"> ' . $data['name'] . '</th><th><input type="submit" value="bearbeiten" name="change_name" id="change_name"/></th></tr>';
+    $html .= '<tr><th> Email </th><th id="email"> ' . $data['email'] . '</th><th><input type="submit" value="bearbeiten" name="change_email" id="change_email"/></th></tr>';
+    $html .= '<tr><th> Punkte </th><th>' . ($data['win'] - $data['lose']) . '</th></tr>';
+    $html .= '<tr><th> Spiele  </th><th>' . ($data['tie'] + $data['win'] + $data['lose']) . '</th></tr>';
+    $html .= '<tr><th> Gewonnen </th><th>' . $data['win'] . '</th></tr>';
+    $html .= '<tr><th> Unentschieden </th><th>' . $data['tie'] . '</th></tr>';
+    $html .= '<tr><th> Verloren </th><th>' . $data['lose'] . '</th></tr>';
+    $html .= '<tr><th> Über dich </th><th id="description">' . $data['description'] . '</th><th><input type="submit" value="bearbeiten" name="change_description" id="change_description"/></th></tr>';
     return ($html . '</table>');
 }
 
 function create_site($tpl)
 {
-    $editable = ['name', 'passwort', 'email', "description"];
     $data = get_player_info($_SESSION['user']);
-    $html = data_to_html($data, $editable);
+    $html = data_to_html($data);
     $tpl->assign('table', $html);
     $tpl->assign('tpl_name', $_GET['page'] . ".tpl");
 }
