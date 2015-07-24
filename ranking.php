@@ -10,9 +10,8 @@ require_once './lib/Ranking.class.php';
 
 if (isset($_GET['page'])) {
     $db_connect = Database::getInstance();
-    $statement = "SELECT userId FROM statistic";
     $data = array();
-    $db_request = $db_connect->prepare($statement);
+    $db_request = $db_connect->prepare('SELECT userId FROM statistic');
     $db_request->execute();
     while ($array = $db_request->fetch()) {
         foreach ($array as $key => $value) {
