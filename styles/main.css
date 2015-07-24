@@ -27,6 +27,9 @@ footer a {
     height: 30px;
     width: 20%;
     margin: 10px 2.5%;
+    background-color: grey;
+    color: greenyellow;
+    font-weight: bold
 }
 
 .header {
