@@ -26,6 +26,9 @@
         <br />
         <input type="submit" value="Anmelden" class="button"><br/>
     </form>
+    {if isset($message)}
+        {$message}
+    {/if}
     <br />
     <form method="post" action="index.php?page=registration">
         <input type="submit" value="=> Registrieren" class="button"><br/>
