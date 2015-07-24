@@ -4,7 +4,7 @@
     <h1>Chat</h1>{if !isset($show_content)}
     <form method="post" action="index.php?page=chat&amp;content=1">
         Chatpartner:
-        <div id="message">
+        <div id="messageFail">
             {if isset($message)}
                 {$message}
             {/if}
