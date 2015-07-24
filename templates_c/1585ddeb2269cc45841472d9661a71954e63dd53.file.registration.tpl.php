@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 22:20:26
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-24 09:46:24
          compiled from ".\templates\registration.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1159955afcdb67a8fe3-76435411%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1585ddeb2269cc45841472d9661a71954e63dd53' => 
     array (
       0 => '.\\templates\\registration.tpl',
-      1 => 1437654494,
+      1 => 1437723370,
       2 => 'file',
     ),
   ),
@@ -37,4 +37,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <?php echo $_smarty_tpl->tpl_vars['message']->value;?>
 
     <?php }?>
+</form>
+<form method="post" action="index.php?page=login">
+    <input type="submit" value="-->Anmelden"><br/>
 </form><?php }} ?>

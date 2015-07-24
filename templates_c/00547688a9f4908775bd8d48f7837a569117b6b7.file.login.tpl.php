@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.20, created on 2015-07-23 12:16:02
+<?php /* Smarty version Smarty-3.1.20, created on 2015-07-24 09:45:56
          compiled from ".\templates\login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:299055afcdb26a7777-50468648%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '00547688a9f4908775bd8d48f7837a569117b6b7' => 
     array (
       0 => '.\\templates\\login.tpl',
-      1 => 1437646419,
+      1 => 1437723370,
       2 => 'file',
     ),
   ),
@@ -25,4 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     Passwort: <input type="password" name="pw"/>
     </br>
     <input type="submit" value="Anmelden"><br/>
+</form>
+<form method="post" action="index.php?page=registration">
+    <input type="submit" value="-->Registrieren"><br/>
 </form><?php }} ?>

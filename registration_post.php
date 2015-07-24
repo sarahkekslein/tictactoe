@@ -31,6 +31,17 @@ if (!isset($_GET['page'])) {
             $statement->execute();
             $statement->closeCursor();
 
+            $statement = $connection->prepare('SELECT id FROM user WHERE name=:name');
+            $statement->bindValue(':name', $_POST['name']);
+            $statement->execute();
+            $array = $statement->fetch();
+
+            $statement = $connection->prepare('INSERT INTO statistic(userId, win, lose, tie) VALUES (:id,0,0,0)');
+            $statement->bindValue(':id', $array['id']);
+            $statement->execute();
+
+            $_SESSION['user'] = $array['id'];
+
             header('Location: index.php?page=game');
         }
     }
