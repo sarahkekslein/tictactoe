@@ -19,6 +19,7 @@ $(document).ready(function () {
 
     $('#change_description').click(function () {
         var text = $('#description').html();
+        alert("12");
         $('#description').html('<textarea name=description>'+text+'</textarea>');
         this.disabled = true;
         return false;

@@ -27,7 +27,7 @@ function data_to_html($data)
     $html .= '<tr><th> Gewonnen </th><td>' . $data['win'] . '</td></tr>';
     $html .= '<tr><th> Unentschieden </th><td>' . $data['tie'] . '</td></tr>';
     $html .= '<tr><th> Verloren </th><td>' . $data['lose'] . '</td></tr>';
-    $html .= '<tr><th> Über dich </th><td class="description">' . $data['description'] . '</td><th><input type="submit" value="bearbeiten" name="change_description" id="change_description"/></th></tr>';
+    $html .= '<tr><th> Über dich </th><td id="description">' . $data['description'] . '</td><th><input type="submit" value="bearbeiten" name="change_description" id="change_description"/></th></tr>';
     return $html;
 }
 
