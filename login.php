@@ -9,7 +9,7 @@ if (isset($_SESSION['user'])) {
     if (isset($_GET['fail'])) {
         $fehler = $_GET['fail'];
         if ($fehler === '1') {
-            $tpl->assign('message', 'fehlende Eingabe!');
+            $tpl->assign('message', 'Fehlende Eingabe!');
         }
         if ($fehler === '2') {
             $tpl->assign('message', 'Das Passwort ist falsch!');
