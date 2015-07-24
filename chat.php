@@ -1,5 +1,4 @@
 <?php
-
 if (!isset($_GET['page'])) {
     echo 'Zugriff verweigert!';
 } else if (isset($_POST['user2']) || isset($_GET['user2'])){
@@ -30,13 +29,12 @@ if (!isset($_GET['page'])) {
 
         $content = "";
         foreach ($messages as $message) {
-            $content .= 'Absender: ' . $message['name'] . "\nNachricht: " . $message['message'] . "\n\n";
+            $content .= "\nAbsender: " . $message['name'] . "\nNachricht: " . $message['message'] . "\n";
         }
 
         $tpl->assign('user_to', $user2_name);
         $tpl->assign('message', $content);
     }
-    
     $tpl->assign('tpl_name', $_GET['page'] . ".tpl");
 } else {
     $tpl->assign('tpl_name', $_GET['page'] . ".tpl");
