@@ -1,7 +1,9 @@
 $(document).ready(function () {
-    $('#proposal').hide();
+    $('#proposals').hide();
     
     $('#chat_partner').keyup(function () {
+        
+        $('#proposal').empty();
         var content = $('#chat_partner').val();
         $.ajax({
             type: 'POST',
@@ -12,15 +14,21 @@ $(document).ready(function () {
 
         }).done(function (result) {
             var proposals = JSON.parse(result);
-            alert(proposals);
-            for(var i in result) {
-                $('#proposal').append(result[i]);
+            var content = '';
+            for (var i = 0; i < proposals.length; i++) {
+                content += '<option value="'+ proposals[i] + '">' + proposals[i] +'</option>';                    
+                $('#proposal').append(content);
             }
-            $('#proposal').show();
+            $('#proposals').show();
         }).fail(function () {
             dialog.show('Fehler', 'Es ist ein Fehler aufgetreten. Bitte laden Sie\n\
                      die Seite neu.');
         });
 
+    });
+    
+    
+    $('#proposal').change(function(){
+        $('#chat_partner').prop('value', $('#proposal').val());
     });
 });

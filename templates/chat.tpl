@@ -1,4 +1,4 @@
-
+<script src="./scripts/chat.js"></script>
 <h1>Los chatte!</h1>
 {if !isset($show_content)}
     <form method="post" action="index.php?page=chat&amp;content=1">
@@ -7,9 +7,14 @@
             {$message}
         {/if}
         </br>
-        <input id="chat_partner" type="text" name="user2"/>
-        </br>    
-        <div id="proposal">
+        <input id="chat_partner" autocomplete="off" type="text" name="user2"/>
+        </br>         
+        <div id="proposals">
+            Vorschläge:
+            </br>
+            <select id="proposal" name="proposal">                 
+                
+            </select>
         </div>
         <input type="submit" value="Auswählen">
     </form>
