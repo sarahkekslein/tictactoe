@@ -12,3 +12,6 @@
         {$message}
     {/if}
 </form>
+<form method="post" action="index.php?page=login">
+    <input type="submit" value="-->Anmelden"><br/>
+</form>
