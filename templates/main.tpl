@@ -18,6 +18,9 @@
             <form method="post" action="index.php?page=chat">
                 <input id="chat" type="submit" value="Chat" class="menu">
             </form>
+            <form method="post" action="index.php?page=ranking">
+                <input id="ranking" type="submit" value="Ranking" class="menu">
+            </form>
             <form method="post" action="index.php?page=logout">
                 <input id="logout" type="submit" value="Logout" class="menu">
             </form>
